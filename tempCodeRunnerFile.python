@@ -1,0 +1,12 @@
+i="Balıkesir Bilecik Aydın Afyon Adana Ankara Amasya"
+b="Artvin  Aksaray Adıyaman Antalyan Ağrı Ardahan"
+c="Bursa Burdur Bolu Bayburt Bartın Batman Bingöl Bitlis Çanakkale "
+d="Çankırı Çorum Düzce Denizli Diyarbakı Edirne Eskişehir Elazığ  Erzincan"
+c="Erzurum Gaziantep Giresun Gümüşhane Kars Kütahya  Kırklareli Kocaeli Kahramanmaraş"
+
+s = "Kayseri Kırşehir Konya  Karaman Kırıkkale  Kastamonu Karabük Kilis İstanbul Sakarya (Adapazarı) Tekirdağ Yalova İzmir"
+s2="Ordu Rize Samsun Sinop Tokat Trabzon Zonguldak Manisa Muğla Uşak Osmaniye Hatay  Hakkâri Nevşehir"
+s3="Niğde Isparta İçel (Mersin) Yozgat Sivas Siirt  Şırnak Şanlıurfa Mardin Muş Malatya Iğdır Van Tunceli "
+
+
+print(i.replace( ' ','',''))
