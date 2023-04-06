@@ -43,14 +43,16 @@ class TestSel:
         username=self.driver.find_element(By.ID,"user-name")
         WebDriverWait(self.driver, 5).until(ac.visibility_of_element_located((By.ID, "password")))
         password=self.driver.find_element(By.ID,"password")
+      
         action = ActionChains(self.driver)
         action.send_keys_to_element(username, "standard_user")
         action.send_keys_to_element(password,"secret_sauce")
         action.perform()
         login=self.driver.find_element(By.ID,"login-button")
         login.click()
-        sleep(2)
-        
+        sleep(5)
+        self.driver.execute_script("window.scrollTo(0, 500)") #execute script is used to scroll down the page and we can use js with execute script
+        sleep(10)
         
         
         
