@@ -17,10 +17,6 @@ class TestSel:
     
 
 
-
-
-
-
     def invalid_test(self):
 
         WebDriverWait(self.driver , 10).until(ac.visibility_of_element_located((By.ID, "user-name")))    
