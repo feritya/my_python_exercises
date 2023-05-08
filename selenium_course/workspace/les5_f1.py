@@ -50,11 +50,10 @@ class TestSel:
         self.driver.execute_script("window.scrollTo(0, 500)") #execute script is used to scroll down the page and we can use js with execute script
         sleep(10)
         
-        
-        
-        
-        while True:
-            continue
+    
+        self.driver.quit()
+
+
 
         
         
