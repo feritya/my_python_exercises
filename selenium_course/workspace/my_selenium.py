@@ -23,4 +23,4 @@ firstList=driver.find_elements(By.CLASS_NAME,"core-section-container my-3 core-s
 sleep(2)
 print(f'benim linkedin hesabımda :{len(firstList)} tane önerilen faliyet bulunmaktadır')  # print number of links
 while True:
-    continue
+    sleep(10)
