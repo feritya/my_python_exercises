@@ -7,6 +7,8 @@ from selenium.webdriver.support  import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from pathlib import Path
 from datetime import date
+import pytest
+
 class  Test_Demmo:
     def setup_method(self):
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
@@ -17,15 +19,15 @@ class  Test_Demmo:
     def teardown_method(self):
         self.driver.quit()    
     
-    @pytest.mark.parametrize("username,password",[("1","1"),("kullaniciadım","sifre")])
+    @pytest.mark.parametrize("username,password",[])
     def test_invalid_login(self,username,password):
         WebDriverWait(self.driver,10).until(EC.presence_of_element_located((By.ID,"user-name")))
         usernameInput = self.driver.find_element(By.ID,"user-name")
         WepDriverWait(self.driver,10).until(EC.presence_of_element_located((By.ID,"password")))
         passwordInput = self.driver.find_element(By.ID,"password")
 
-        usernameInput.send_keys("1")
-        passwordInput.send_keys("1")
+        usernameInput.send_keys("username")
+        passwordInput.send_keys("password")
 
         LoginBtn=self.driver.find_element(By.ID,"login-button")
         LoginBtn.click()
