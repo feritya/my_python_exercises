@@ -1,3 +1,6 @@
+# bu projemde imdp nin sitesine gidip oradan top 250 listesinden en iyi 10 filmden 
+# ve 2000 yılından sonra çekilmiş filmleri çeken ve ekrana yazan bir program geliştirdim 
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -17,12 +20,14 @@ for tr in list:
     year=tr.find("td",{"class":"titleColumn"}).find("span").text.strip("()")
 
     rating=tr.find("td",{"class":"ratingColumn imdbRating"}).find("strong").text
+    
     year =int(year)
     if year <2000:
         count-=1
         continue
 
     print(count,"-",title.ljust(50)," ",year," ",rating)
+    
 
 # output
 # 1 - The Dark Knight                                      2008   9.0
