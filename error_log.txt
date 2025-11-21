@@ -1,0 +1,2 @@
+Hata: division by zero
+Hata: division by zero
